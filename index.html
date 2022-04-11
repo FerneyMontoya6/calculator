@@ -17,65 +17,77 @@
     <section class="calculator-container">
       <div class="calculator--item calculator-header">
         <h2>calc</h2>
-        <input type="checkbox" name="toggle" id="toggle">
+        <div class="toggle-container">
+          <p>THEME</p>
+          <div class="toggle-container--options">
+            <div class="options-container">
+              <button>1</button>
+              <button>2</button>
+              <button>3</button>
+            </div>
+            <div class="slider">
+              <span class="circle"></span>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="calculator--item calculator--input">
-        <input type="number" name="result" id="">
+        <input type="number" name="result" id="result" autofocus>
       </div>
       <div class="calculator-keypad">
         <div class="calculator-keys">
-          <button>7</button>
+          <button id="b7">7</button>
         </div>
         <div class="calculator-keys">
-          <button>8</button>
+          <button id="b8">8</button>
         </div>
         <div class="calculator-keys">
-          <button>9</button>
+          <button id="b9">9</button>
         </div>
         <div class="calculator-keys del-key">
-          <button>DEL</button>
+          <button id="bDelete">DEL</button>
         </div>
         <div class="calculator-keys">
-          <button>4</button>
+          <button id="b4">4</button>
         </div>
         <div class="calculator-keys">
-          <button>5</button>
+          <button id="b5">5</button>
         </div>
         <div class="calculator-keys">
-          <button>6</button>
+          <button id="b6">6</button>
         </div>
         <div class="calculator-keys">
-          <button>+</button>
+          <button id="bPlus">+</button>
         </div>
         <div class="calculator-keys">
-          <button>1</button>
+          <button id="b1">1</button>
         </div>
         <div class="calculator-keys">
-          <button>2</button>
+          <button id="b2">2</button>
         </div>
         <div class="calculator-keys">
-          <button>3</button>
+          <button id="b3">3</button>
         </div>
         <div class="calculator-keys">
-          <button>-</button>
+          <button id="bSubstraction">-</button>
         </div>
         <div class="calculator-keys">
-          <button>.</button>
+          <button id="bDecimal">.</button>
         </div>
         <div class="calculator-keys">
-          <button>0</button>
+          <button id="b0">0</button>
         </div>
         <div class="calculator-keys">
-          <button>/</button>
+          <button id="bDivision">/</button>
         </div>
         <div class="calculator-keys">
-          <button>x</button>
+          <button id="bMultiplication">x</button>
         </div>
         <div class="calculator-keys reset-key">
-          <button>RESET</button>
+          <button id="bReset">RESET</button>
         </div>
         <div class="calculator-keys equal-key">
-          <button>=</button>
+          <button id="bEquals">=</button>
         </div>
       </div>
     </section>
