@@ -86,10 +86,32 @@ b9.addEventListener('click', () => {
   input.focus();
 });
 
+bPlus.addEventListener('click', () => {
+  input.value += '+';
+  inputArray.push('+');
+  input.focus();
+});
+bSubstraction.addEventListener('click', () => {
+  input.value += '-';
+  inputArray.push('-');
+  input.focus();
+});
+
 document.addEventListener('keydown', (event) => {
   const key = event.keyCode;
+  const keyString = String.fromCharCode(key);
 
   switch (key) {
+    case 8:
+      inputArray.pop();
+      input.value = null;
+
+      inputArray.forEach(element => {
+        input.value += element;
+      });
+
+      input.focus();
+      break;
     case 96:
       inputArray.push(0);
       break;
@@ -120,8 +142,21 @@ document.addEventListener('keydown', (event) => {
     case 105:
       inputArray.push(9);
       break;
+    case 107:
+      inputArray.push('+');
+      break;
     default:
-      console.error('Error en la detección de evento de teclado');
+      inputArray.push(keyString);
+      inputArray.pop();
+
+      input.value = null;
+
+      inputArray.forEach(element => {
+        input.value += element;
+      });
+
+      input.focus();
+      break;
   }
 
 });
